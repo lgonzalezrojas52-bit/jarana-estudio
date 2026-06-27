@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>JARANA | Comunicación estratégica para empresas mineras</title>
+
+  <meta name="description" content="JARANA ayuda a empresas mineras e industriales a fortalecer su reputación, comunicación institucional, posicionamiento digital y contenido audiovisual. Solicitá un diagnóstico gratuito." />
+
+  <style>
+    :root {
+      --bg: #07040b;
+      --bg-soft: #120819;
+      --violet: #8a2be2;
+      --violet-2: #b76cff;
+      --orange: #ff7a18;
+      --yellow: #ffb000;
+      --white: #ffffff;
+      --muted: #c9bdd8;
+      --line: rgba(255,255,255,0.12);
+      --card: rgba(255,255,255,0.06);
+      --card-2: rgba(255,255,255,0.09);
+      --shadow: 0 24px 80px rgba(0,0,0,0.45);
+      --radius: 28px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(138,43,226,0.32), transparent 35%),
+        radial-gradient(circle at 85% 10%, rgba(255,122,24,0.20), transparent 28%),
+        linear-gradient(180deg, #07040b 0%, #100718 45%, #07040b 100%);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    .page {
+      position: relative;
+      z-index: 2;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(7,4,11,0.72);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      font-size: 1.35rem;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--violet), var(--orange));
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 30px rgba(138,43,226,0.35);
+      font-weight: 950;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      cursor: pointer;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-weight: 850;
+      font-size: 0.96rem;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      color: #160707;
+      box-shadow: 0 16px 40px rgba(255,122,24,0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 52px rgba(255,122,24,0.36);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--line);
+      color: var(--white);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.13);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      padding: 86px 0 80px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.07);
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 0.86rem;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow span {
+      width: 8px;
+      height: 8px;
+      background: var(--orange);
+      border-radius: 50%;
+      box-shadow: 0 0 18px var(--orange);
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6.7rem);
+      line-height: 0.9;
+      letter-spacing: -0.08em;
+      margin-bottom: 28px;
+      max-width: 870px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #fff 15%, #d9b9ff 40%, #ffb000 90%);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      line-height: 1.7;
+      max-width: 670px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 560px;
+      border-radius: 38px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03)),
+        radial-gradient(circle at 20% 10%, rgba(255,122,24,0.32), transparent 28%),
+        radial-gradient(circle at 80% 80%, rgba(138,43,226,0.42), transparent 34%);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 28px;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.13);
+      pointer-events: none;
+    }
+
+    .dashboard {
+      position: absolute;
+      inset: auto 28px 28px 28px;
+      border-radius: 26px;
+      padding: 22px;
+      background: rgba(5, 2, 8, 0.62);
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(18px);
+    }
+
+    .dash-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 12px;
+    }
+
+    .dash-title {
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      font-size: 1.1rem;
+    }
+
+    .dash-pill {
+      color: #130707;
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .bars {
+      display: grid;
+      gap: 13px;
+    }
+
+    .bar {
+      height: 42px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bar span {
+      position: absolute;
+      inset: 0;
+      width: var(--w);
+      background: linear-gradient(90deg, var(--violet), var(--orange));
+      border-radius: inherit;
+    }
+
+    .floating-word {
+      position: absolute;
+      font-weight: 950;
+      letter-spacing: -0.08em;
+      line-height: 0.85;
+      opacity: 0.16;
+      font-size: clamp(4rem, 8vw, 8rem);
+      transform: rotate(-7deg);
+      left: 25px;
+      top: 75px;
+    }
+
+    .metric-box {
+      position: absolute;
+      right: 34px;
+      top: 40px;
+      width: 210px;
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .metric-box strong {
+      display: block;
+      font-size: 2.4rem;
+      letter-spacing: -0.06em;
+    }
+
+    .metric-box small {
+      color: var(--muted);
+      font-weight: 650;
+      line-height: 1.45;
+    }
+
+    section {
+      padding: 82px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .kicker {
+      color: var(--orange);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+      margin-bottom: 18px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.75;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .problem-card,
+    .service-card,
+    .step-card,
+    .proof-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 16px 50px rgba(0,0,0,0.20);
+    }
+
+    .problem-card span {
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: rgba(255,122,24,0.14);
+      color: var(--orange);
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 1.24rem;
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+      margin-bottom: 11px;
+    }
+
+    .problem-card p,
+    .service-card p,
+    .step-card p,
+    .proof-card p {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.96rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .big-panel {
+      border-radius: 36px;
+      padding: 34px;
+      background:
+        linear-gradient(145deg, rgba(138,43,226,0.28), rgba(255,122,24,0.12)),
+        rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      min-height: 100%;
+      box-shadow: var(--shadow);
+    }
+
+    .big-panel h2 {
+      font-size: clamp(2.1rem, 4vw, 3.8rem);
+    }
+
+    .big-panel p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1.04rem;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      min-height: 190px;
+    }
+
+    .service-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(138,43,226,0.42), rgba(255,122,24,0.32));
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      font-weight: 950;
+    }
+
+    .method {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .step-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-number {
+      font-size: 4.4rem;
+      font-weight: 950;
+      letter-spacing: -0.09em;
+      line-height: 0.9;
+      opacity: 0.20;
+      margin-bottom: 20px;
+      color: var(--violet-2);
+    }
+
+    .diagnostic {
+      border-radius: 42px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at top right, rgba(255,122,24,0.22), transparent 35%),
+        linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+    }
+
+    .diagnostic-content {
+      padding: 44px;
+    }
+
+    .diagnostic-list {
+      margin-top: 24px;
+      display: grid;
+      gap: 13px;
+    }
+
+    .diagnostic-list li {
+      list-style: none;
+      color: var(--muted);
+      line-height: 1.5;
+      display: flex;
+      gap: 10px;
+    }
+
+    .diagnostic-list li::before {
+      content: "●";
+      color: var(--orange);
+    }
+
+    .form-wrap {
+      background: rgba(4,2,6,0.58);
+      border-left: 1px solid var(--line);
+      padding: 34px;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      font-size: 0.86rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      border-radius: 16px;
+      padding: 14px 15px;
+      outline: none;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 108px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(255,255,255,0.42);
+    }
+
+    select option {
+      color: #111;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      margin-top: 6px;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .proof-card strong {
+      display: block;
+      font-size: 2.5rem;
+      letter-spacing: -0.08em;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #fff, var(--violet-2));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .final-cta {
+      text-align: center;
+      border-radius: 42px;
+      padding: 70px 36px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 30% 10%, rgba(138,43,226,0.33), transparent 30%),
+        radial-gradient(circle at 70% 70%, rgba(255,122,24,0.22), transparent 32%),
+        rgba(255,255,255,0.06);
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta h2 {
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .final-cta p {
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto 30px;
+      font-size: 1.08rem;
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 30;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #071008;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      font-weight: 950;
+      box-shadow: 0 18px 45px rgba(37,211,102,0.33);
+    }
+
+    @media (max-width: 960px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .split,
+      .diagnostic {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 460px;
+      }
+
+      .problem-grid,
+      .method,
+      .proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-wrap {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 26px, var(--max));
+      }
+
+      .hero {
+        padding: 58px 0 54px;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-card {
+        min-height: 390px;
+        border-radius: 28px;
+      }
+
+      .metric-box {
+        width: 170px;
+        right: 18px;
+        top: 22px;
+      }
+
+      .floating-word {
+        font-size: 4.3rem;
+      }
+
+      .problem-grid,
+      .service-grid,
+      .method,
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .diagnostic-content,
+      .form-wrap,
+      .big-panel {
+        padding: 26px;
+      }
+
+      .final-cta {
+        padding: 46px 22px;
+      }
+
+      .whatsapp-float {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="noise"></div>
+
+  <div class="page">
+
+    <header>
+      <div class="container nav">
+        <a href="#" class="brand">
+          <span class="brand-mark">J</span>
+          <span>JARANA</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#problemas">Problemas</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#metodo">Método</a>
+          <a href="#diagnostico">Diagnóstico</a>
+        </nav>
+
+        <a href="#diagnostico" class="btn btn-primary">Solicitar diagnóstico</a>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="container hero-grid">
+
+          <div>
+            <div class="eyebrow">
+              <span></span>
+              Comunicación B2B para minería e industria
+            </div>
+
+            <h1>
+              Comunicación estratégica para empresas <span class="gradient-text">mineras.</span>
+            </h1>
+
+            <p>
+              Ayudamos a empresas mineras, industriales y proveedores B2B a fortalecer su reputación,
+              ordenar su mensaje, mejorar su presencia digital y convertir proyectos complejos en comunicación clara,
+              profesional y medible.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#diagnostico" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+              <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Panel visual de posicionamiento">
+            <div class="floating-word">HACER<br>RUIDO</div>
+
+            <div class="metric-box">
+              <strong>B2B</strong>
+              <small>Reputación, contenido, pauta y posicionamiento para empresas.</small>
+            </div>
+
+            <div class="dashboard">
+              <div class="dash-top">
+                <div class="dash-title">Sistema de comunicación</div>
+                <div class="dash-pill">JARANA</div>
+              </div>
+
+              <div class="bars">
+                <div class="bar"><span style="--w: 88%;"></span></div>
+                <div class="bar"><span style="--w: 72%;"></span></div>
+                <div class="bar"><span style="--w: 94%;"></span></div>
+                <div class="bar"><span style="--w: 66%;"></span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="problemas">
+        <div class="container">
+
+          <div class="section-head">
+            <div class="kicker">El desafío</div>
+            <h2>La minería necesita comunicar mejor.</h2>
+            <p>
+              En sectores técnicos, industriales y de alto impacto, no alcanza con “estar en redes”.
+              Hace falta construir confianza, explicar procesos, cuidar la reputación y hablarle a públicos distintos:
+              comunidades, colaboradores, gobiernos, proveedores e inversores.
+            </p>
+          </div>
+
+          <div class="problem-grid">
+            <article class="problem-card">
+              <span>01</span>
+              <h3>Baja visibilidad institucional</h3>
+              <p>Empresas con gran capacidad operativa, pero poca presencia digital o comunicación poco consistente.</p>
+            </article>
+
+            <article class="problem-card">
+              <span>02</span>
+              <h3>Reputación débil o dispersa</h3>
+              <p>Mensajes sueltos, poco control narrativo y dificultad para construir percepción positiva.</p>
+            </article>
+
+            <article class="problem-card">
+              <span>03</span>
+              <h3>Proyectos técnicos difíciles de explicar</h3>
+              <p>Información compleja que necesita transformarse en contenido simple, claro y creíble.</p>
+            </article>
+
+            <article class="problem-card">
+              <span>04</span>
+              <h3>Falta de contenido profesional</h3>
+              <p>Necesidad de piezas audiovisuales, campañas y comunicación interna con calidad corporativa.</p>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="servicios">
+        <div class="container split">
+
+          <div class="big-panel">
+            <div class="kicker">Qué hacemos</div>
+            <h2>Estrategia + creatividad + ejecución.</h2>
+            <p>
+              JARANA integra comunicación institucional, marketing digital y producción audiovisual
+              para que empresas mineras e industriales puedan comunicar con claridad, autoridad y consistencia.
+            </p>
+            <br />
+            <p>
+              No trabajamos piezas aisladas: armamos un sistema de comunicación pensado para visibilidad,
+              reputación y generación de oportunidades comerciales.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-icon">01</div>
+              <h3>Comunicación institucional</h3>
+              <p>Mensajes corporativos, narrativa empresarial, comunicación interna y relacionamiento con públicos clave.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">02</div>
+              <h3>Reputación corporativa</h3>
+              <p>Construcción de confianza, presencia profesional y posicionamiento frente a comunidades y stakeholders.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">03</div>
+              <h3>LinkedIn corporativo</h3>
+              <p>Contenido para decisores, posicionamiento B2B, employer branding y presencia institucional.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">04</div>
+              <h3>Producción audiovisual</h3>
+              <p>Videos institucionales, cobertura de operaciones, piezas para campañas y contenido de alto impacto.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">05</div>
+              <h3>Paid media B2B</h3>
+              <p>Campañas en Google, LinkedIn y Meta orientadas a visibilidad, leads calificados y posicionamiento.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon">06</div>
+              <h3>Branding corporativo</h3>
+              <p>Identidad visual, tono de comunicación, presentaciones, piezas comerciales y materiales institucionales.</p>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="metodo">
+        <div class="container">
+
+          <div class="section-head">
+            <div class="kicker">Metodología</div>
+            <h2>De proyecto complejo a mensaje claro.</h2>
+            <p>
+              Ordenamos la comunicación desde el diagnóstico hasta la medición, para que cada acción tenga un objetivo,
+              un público y un indicador de resultado.
+            </p>
+          </div>
+
+          <div class="method">
+            <article class="step-card">
+              <div class="step-number">01</div>
+              <h3>Diagnóstico</h3>
+              <p>Analizamos presencia digital, reputación, comunicación institucional, contenido actual y oportunidades de mejora.</p>
+            </article>
+
+            <article class="step-card">
+              <div class="step-number">02</div>
+              <h3>Estrategia</h3>
+              <p>Definimos mensajes, públicos, canales, contenidos, campañas y prioridades según el momento de la empresa.</p>
+            </article>
+
+            <article class="step-card">
+              <div class="step-number">03</div>
+              <h3>Ejecución y medición</h3>
+              <p>Producimos piezas, activamos campañas, damos seguimiento comercial y medimos resultados para optimizar.</p>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+
+          <div class="section-head">
+            <div class="kicker">Diferencial</div>
+            <h2>No solo hacemos contenido. Construimos percepción.</h2>
+            <p>
+              Mientras muchas agencias se enfocan únicamente en redes sociales o pauta,
+              JARANA combina visión estratégica, capacidad creativa y ejecución operativa para acompañar
+              a empresas que necesitan comunicar con profesionalismo.
+            </p>
+          </div>
+
+          <div class="proof-grid">
+            <article class="proof-card">
+              <strong>360°</strong>
+              <h3>Comunicación integral</h3>
+              <p>Branding, contenidos, campañas, web, audiovisual y seguimiento comercial en un mismo sistema.</p>
+            </article>
+
+            <article class="proof-card">
+              <strong>B2B</strong>
+              <h3>Enfoque corporativo</h3>
+              <p>Mensajes pensados para decisores, instituciones, proveedores, comunidades y equipos internos.</p>
+            </article>
+
+            <article class="proof-card">
+              <strong>ROI</strong>
+              <h3>Acciones medibles</h3>
+              <p>Campañas con indicadores claros: alcance, clics, formularios, reuniones y leads calificados.</p>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="diagnostico">
+        <div class="container">
+
+          <div class="diagnostic">
+
+            <div class="diagnostic-content">
+              <div class="kicker">Oferta de entrada</div>
+              <h2>Solicitá un diagnóstico estratégico gratuito.</h2>
+              <p style="color: var(--muted); line-height: 1.75; font-size: 1.06rem;">
+                Revisamos la presencia digital y comunicacional de tu empresa para detectar oportunidades concretas
+                de mejora en reputación, posicionamiento, contenidos y comunicación institucional.
+              </p>
+
+              <ul class="diagnostic-list">
+                <li>Análisis de presencia digital.</li>
+                <li>Evaluación de reputación online.</li>
+                <li>Revisión de comunicación institucional.</li>
+                <li>Identificación de oportunidades de mejora.</li>
+                <li>Recomendaciones iniciales de posicionamiento.</li>
+                <li>Propuesta de próximos pasos.</li>
+              </ul>
+            </div>
+
+            <div class="form-wrap">
+              <form id="leadForm">
+                <div class="form-row">
+                  <label for="name">Nombre y apellido</label>
+                  <input id="name" name="name" type="text" placeholder="Ej: Juan Pérez" required />
+                </div>
+
+                <div class="form-row">
+                  <label for="company">Empresa</label>
+                  <input id="company" name="company" type="text" placeholder="Nombre de la empresa" required />
+                </div>
+
+                <div class="form-row">
+                  <label for="role">Cargo</label>
+                  <input id="role" name="role" type="text" placeholder="Ej: Gerente de Marketing" />
+                </div>
+
+                <div class="form-row">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="nombre@empresa.com" required />
+                </div>
+
+                <div class="form-row">
+                  <label for="phone">WhatsApp</label>
+                  <input id="phone" name="phone" type="tel" placeholder="+54 9 ..." />
+                </div>
+
+                <div class="form-row">
+                  <label for="need">Principal necesidad</label>
+                  <select id="need" name="need">
+                    <option value="Reputación corporativa">Reputación corporativa</option>
+                    <option value="Comunicación institucional">Comunicación institucional</option>
+                    <option value="LinkedIn corporativo">LinkedIn corporativo</option>
+                    <option value="Producción audiovisual">Producción audiovisual</option>
+                    <option value="Campañas B2B">Campañas B2B</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <label for="message">Contanos brevemente qué están buscando</label>
+                  <textarea id="message" name="message" placeholder="Queremos mejorar nuestra comunicación, reputación, contenido, campañas..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+
+                <p class="form-note">
+                  Este formulario está preparado para abrir WhatsApp con los datos cargados.
+                  También podés conectarlo luego a Formspree, Resend, Supabase o Google Sheets.
+                </p>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="final-cta">
+            <div class="kicker">JARANA Marketing B2B</div>
+            <h2>Hacemos que tu empresa haga ruido donde importa.</h2>
+            <p>
+              Comunicación estratégica, reputación corporativa, contenido institucional,
+              LinkedIn, paid media y producción audiovisual para empresas que necesitan crecer con seriedad.
+            </p>
+            <a href="#diagnostico" class="btn btn-primary">Quiero mi diagnóstico gratuito</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>© 2026 JARANA. Comunicación, publicidad y marketing B2B.</div>
+        <div>Hacemos que tu marca haga ruido.</div>
+      </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/5492610000000?text=Hola%20JARANA%2C%20quiero%20solicitar%20un%20diagn%C3%B3stico%20estrat%C3%A9gico%20gratuito." target="_blank" aria-label="Contactar por WhatsApp">
+      W
+    </a>
+
+  </div>
+
+  <script>
+    const WHATSAPP_NUMBER = "5492610000000";
+
+    const form = document.getElementById("leadForm");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const data = new FormData(form);
+
+      const name = data.get("name") || "";
+      const company = data.get("company") || "";
+      const role = data.get("role") || "";
+      const email = data.get("email") || "";
+      const phone = data.get("phone") || "";
+      const need = data.get("need") || "";
+      const message = data.get("message") || "";
+
+      const text = `
+Hola JARANA, quiero solicitar un diagnóstico estratégico gratuito.
+
+Nombre: ${name}
+Empresa: ${company}
+Cargo: ${role}
+Email: ${email}
+WhatsApp: ${phone}
+Necesidad principal: ${need}
+
+Mensaje:
+${message}
+      `.trim();
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
